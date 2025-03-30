@@ -20,6 +20,7 @@ class MHA(nn.Module):
         self.layer_norm = nn.LayerNorm(d_model)
 
     def forward(self, x, mask=None):
+        
         batch_size, seq_len, d_model = x.size()
 
         Q = self.q(x)
